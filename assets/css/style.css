@@ -73,6 +73,7 @@ html, body {
   -ms-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* background-color: #F9F8F6; */
 }
 
 a {
@@ -1773,7 +1774,7 @@ body {
   .about-us::before,
   .testimonials::before,
   .contact-us::before {
-    display: none;
+    display: block;
   }
   .about-us .section-heading p,
   .testimonials .section-heading p,
