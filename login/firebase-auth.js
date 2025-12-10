@@ -1,0 +1,47 @@
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } 
+    from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
+
+const firebaseConfig = {
+    apiKey: "AIzaSyDYMi9Tb6e7l4vnj1_Sw1_KPKwWvZ035wU",
+    authDomain: "bilish-project.firebaseapp.com",
+    projectId: "bilish-project",
+    storageBucket: "bilish-project.firebasestorage.app",
+    messagingSenderId: "16431267324",
+    appId: "1:16431267324:web:b520510474cfb91be44679",
+    measurementId: "G-M0VCMJ6PXK"
+};
+
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+
+// REGISTER
+document.getElementById("reg-btn").addEventListener("click", async (e) => {
+    e.preventDefault(); // IMPORTANT
+    const email = document.getElementById("reg-email").value;
+    const pass = document.getElementById("reg-pass").value;
+
+    try {
+        await createUserWithEmailAndPassword(auth, email, pass);
+        alert("Register successful!");
+    } 
+    catch (error) {
+        alert(error.message);
+    }
+});
+
+// LOGIN
+document.getElementById("login-btn").addEventListener("click", async (e) => {
+    e.preventDefault(); // IMPORTANT
+    const email = document.getElementById("login-email").value;
+    const pass = document.getElementById("login-pass").value;
+
+    try {
+        await signInWithEmailAndPassword(auth, email, pass);
+        alert("Login successful!");
+        window.location.href = "/Bimbel_project/BiLish/index.html";
+    } 
+    catch (error) {
+        alert(error.message);
+    }
+});
