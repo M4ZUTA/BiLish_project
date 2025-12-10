@@ -65,7 +65,7 @@ Usage
 
 ------ Author Notes ------
 
-• Favicon added
-• Contact details and social links available
-• Ready for presentation to client
-• You can access the project by visiting this link: bi-lish-project.vercel.app
+1. Favicon added
+2. Contact details and social links available
+3. Ready for presentation to client
+4. You can access the project by visiting this link: bi-lish-project.vercel.app
