@@ -1415,6 +1415,7 @@ Contact Style
   margin-top: 80px;
   position: relative;
   padding: 50px 0px;
+  overflow: hidden;
 }
 
 .contact-us:before {
@@ -1423,7 +1424,7 @@ Contact Style
   bottom: 0;
   left: 0;
   z-index: -1;
-  width: 65%;
+  width: 50%;
   height: 100%;
   background-color: #f1f0fe;
   content: '';
@@ -1439,6 +1440,23 @@ Contact Style
 
 .contact-us  .section-heading p {
   margin-top: 50px;
+}
+
+.contact-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contact-list li {
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+
+.contact-list img {
+  width: 20px;
+  margin-right: 8px;
+  vertical-align: middle;
 }
 
 .contact-us .special-offer {
