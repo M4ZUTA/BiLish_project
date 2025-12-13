@@ -1142,8 +1142,50 @@ Team Style
 */
 
 .team {
-  margin-top: 100px;
-    padding-top: 140px;
+  margin-top: 40px;        /* jarak dari section sebelumnya */
+  padding-top: 20px;       /* ruang di atas kartu team */
+  position: relative;
+}
+
+.team .team-title {
+  text-align: center;
+  margin-bottom: 28px;
+  position: relative;
+  z-index: 5;
+  transform: translateY(-40px); /* tarik ke atas untuk isi ruang kosong di atas foto */
+}
+
+/* Grid spacing — tetap rapi ketika cuma 2 anggota */
+.team .row.justify-content-center {
+  gap: 1.5rem; /* gunakan gap agar rapi (bootstrap 5 compatible) */
+  align-items: start;
+}
+
+/* Batasi lebar kolom agar foto tidak terlalu melebihi card */
+.team .col-lg-3 {
+  max-width: 300px;
+}
+
+/* Posisi gambar team: center over card, lebih responsif */
+.team-member {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.team-member img {
+  max-width: 180px;       /* ukuran avatar */
+  width: 100%;
+  border-radius: 50%;
+  position: relative;     /* bukan absolute lagi; agar flow natural */
+  top: -90px;             /* tarik naik di atas kartu */
+  transition: all .3s;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+
+/* Karena gambar menonjol di atas kartu, tambahkan padding top pada main-content */
+.team-member .main-content {
+  padding-top: 100px;     /* bikin ruang untuk avatar */
 }
 
 .team-member {
@@ -1204,6 +1246,12 @@ Team Style
 .team-member .main-content ul li a:hover {
   background-color: #223d5b;
   color: #fff;
+}
+
+@media (min-width: 992px) {
+  #team {
+    margin-top: 150px !important;
+  }
 }
 
 
